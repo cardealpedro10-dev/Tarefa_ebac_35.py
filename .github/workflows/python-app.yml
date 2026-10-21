@@ -1,31 +1,3 @@
-name: CI
-
-on:
-  push:
-    branches:
-      - main
-      - master
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout do código
-        uses: actions/checkout@v3
-
-      - name: Configurar o Python 3.9
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
-      - name: Instalar o Poetry
-        uses: snok/install-poetry@v1
-
-      - name: Instalar dependências
-        run: poetry install --no-root --no-interaction
-
-      - name: Executar testes
-        run: pytest
-
- 
+git add .
+git commit -m "fix: ajusta workflow com poetry install e pytest conforme orientação"
+git push origin master
