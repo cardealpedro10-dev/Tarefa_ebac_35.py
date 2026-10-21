@@ -21,6 +21,8 @@ jobs:
 
       - name: Instalar o Poetry
         uses: snok/install-poetry@v1
+        with:
+          version: 1.7.1
 
       - name: Instalar dependências
         run: poetry install --no-root --no-interaction
